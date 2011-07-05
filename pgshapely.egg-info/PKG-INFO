@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: pgshapely
+Version: 0.1.0
+Summary: shapely geometry type integration with psycopg2 & PostGIS
+Home-page: http://www.github.com/skwash/pgshapely
+Author: Josh Hansen
+Author-email: josh@skwash.net
+License: UNKNOWN
+Description: UNKNOWN
+Platform: Posix; Mac OS X

@@ -1,0 +1,8 @@
+setup.py
+pgshapely/__init__.py
+pgshapely/pgshapely.py
+pgshapely.egg-info/PKG-INFO
+pgshapely.egg-info/SOURCES.txt
+pgshapely.egg-info/dependency_links.txt
+pgshapely.egg-info/requires.txt
+pgshapely.egg-info/top_level.txt
