@@ -6,6 +6,7 @@ setup(
     metadata_version    = '0.1',
     name                = 'pgshapely',
     version             = '0.1.0',
+    license             = 'BSD',
     description         = 'shapely geometry type integration with psycopg2 & PostGIS',
     author              = 'Josh Hansen',
     author_email        = 'josh@skwash.net',

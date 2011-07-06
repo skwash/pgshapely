@@ -5,7 +5,7 @@ import test_points, test_polys
 def test_suite():
     suite = TestSuite()
     suite.addTest(test_points.test_suite())
-    #suite.addTest(test_polys.test_suite())
+    suite.addTest(test_polys.test_suite())
     return suite
     
     
