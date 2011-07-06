@@ -15,6 +15,6 @@ setup(
     install_requires    = ['shapely>=1.2.0','psycopg2>=2.0.0'],
     platforms           = 'Posix; Mac OS X',
     url                 = 'http://www.github.com/skwash/pgshapely',
-    test_suite          = 'pgshapelys.tests.test_suite'
+    test_suite          = 'pgshapely.tests.test_suite'
 )
 

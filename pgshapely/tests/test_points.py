@@ -1,10 +1,11 @@
 import unittest
 import pgshapely
+from shapely.geometry import Point
 
 class TestPoints(unittest.TestCase):
 
     database = "test"
-    user = "test"
+    user     = "test"
     password = "test"
 
     def setUp(self):
@@ -20,11 +21,12 @@ class TestPoints(unittest.TestCase):
     def test_points(self):
         
         params = {
-            'x'    : -122.2482834, 
-            'y'    : 47.4377447,
-            'ewkb' : '01010000A0E6100000F1C80EE0E38F5EC0A93FB10408B847400000000000000000',
-            'wkt'  : 'POINT(-122.2482834 47.4377447)',
-            'ewkt' : 'SRID=4326;POINT(-122.2482834 47.4377447)'
+            'x'     : -122.2482834, 
+            'y'     : 47.4377447,
+            'ewkb'  : '01010000A0E6100000F1C80EE0E38F5EC0A93FB10408B847400000000000000000',
+            'wkt'   : 'POINT(-122.2482834 47.4377447)',
+            'ewkt'  : 'SRID=4326;POINT(-122.2482834 47.4377447)',
+            'point' : Point(-122.2482834, 47.4377447)
         }
         
         cursor = self.conn.cursor()
@@ -42,13 +44,11 @@ class TestPoints(unittest.TestCase):
         cursor.execute(sql)
         
         for row in cursor.fetchall():
-            #print row[0]
             point = row[0]
-            print point
 
             self.assertEquals(point.x,params['x'])
             self.assertEquals(point.y,params['y'])
-            #self.assertEquals(point.wkt, params['wkt'])
+            self.assertTrue(point.equals(params['point']))
 
         sql = "DELETE FROM test;"
         cursor.execute(sql)
